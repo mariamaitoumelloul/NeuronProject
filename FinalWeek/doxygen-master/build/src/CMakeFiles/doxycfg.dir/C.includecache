@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/INTRANET/aitoumel/myfiles/NeuronProject/Week1/doxygen-master/src/portable_c.c
+AvailabilityMacros.h
+-
+iconv.h
+-
+

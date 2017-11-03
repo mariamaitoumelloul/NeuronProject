@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/INTRANET/aitoumel/myfiles/NeuronProject/Week1/doxygen-master/libmd5/md5.c
+string.h
+-
+sys/types.h
+-
+md5.h
+/home/INTRANET/aitoumel/myfiles/NeuronProject/Week1/doxygen-master/libmd5/md5.h
+
+/home/INTRANET/aitoumel/myfiles/NeuronProject/Week1/doxygen-master/libmd5/md5.h
+md5_loc.h
+/home/INTRANET/aitoumel/myfiles/NeuronProject/Week1/doxygen-master/libmd5/md5_loc.h
+
+/home/INTRANET/aitoumel/myfiles/NeuronProject/Week1/doxygen-master/libmd5/md5_loc.h
+

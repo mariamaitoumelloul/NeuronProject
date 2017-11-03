@@ -1,0 +1,11 @@
+-I/usr/include
+-I/home/INTRANET/aitoumel/myfiles/NeuronProject/Week1/doxygen-master/addon/doxywizard/.
+-I/home/INTRANET/aitoumel/myfiles/NeuronProject/Week1/doxygen-master/src
+-I/home/INTRANET/aitoumel/myfiles/NeuronProject/Week1/doxygen-master/qtools
+-I/home/INTRANET/aitoumel/myfiles/NeuronProject/Week1/doxygen-master/build/generated_src
+-DQT_NO_CAST_FROM_ASCII
+-DQT_NO_CAST_TO_ASCII
+-DUNICODE
+-o
+/home/INTRANET/aitoumel/myfiles/NeuronProject/Week1/doxygen-master/build/addon/doxywizard/moc_inputstring.cpp
+/home/INTRANET/aitoumel/myfiles/NeuronProject/Week1/doxygen-master/addon/doxywizard/inputstring.h

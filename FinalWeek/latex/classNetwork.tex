@@ -1,0 +1,82 @@
+\hypertarget{classNetwork}{\section{Network Class Reference}
+\label{classNetwork}\index{Network@{Network}}
+}
+
+
+class represanting neurons conexions  
+
+
+
+
+{\ttfamily \#include $<$Network.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classNetwork_a3cc2fb4f8fa4d507077e8da85ce5a1c8}{Network} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hypertarget{classNetwork_ada5ad9d86ab3d81803140410e22d82af}{void \hyperlink{classNetwork_ada5ad9d86ab3d81803140410e22d82af}{generate} ()}\label{classNetwork_ada5ad9d86ab3d81803140410e22d82af}
+
+\begin{DoxyCompactList}\small\item\em fonction that add N neurons in the network thanks to the function add\-\_\-neuron() \end{DoxyCompactList}\item 
+void \hyperlink{classNetwork_a6291ac92355a8790b74dc7b327439e6f}{Update\-\_\-connection} ()
+\begin{DoxyCompactList}\small\item\em fnction that add a target neuron in the table of the source neuron. \end{DoxyCompactList}\item 
+void \hyperlink{classNetwork_accb4454cc984031041b277556634f646}{update} (size\-\_\-t t\-\_\-start, size\-\_\-t t\-\_\-stop)
+\begin{DoxyCompactList}\small\item\em Update the network state from time t to t+\-T. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+class represanting neurons conexions 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classNetwork_a3cc2fb4f8fa4d507077e8da85ce5a1c8}{\index{Network@{Network}!Network@{Network}}
+\index{Network@{Network}!Network@{Network}}
+\subsubsection[{Network}]{\setlength{\rightskip}{0pt plus 5cm}Network\-::\-Network (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classNetwork_a3cc2fb4f8fa4d507077e8da85ce5a1c8}
+
+
+Constructor. 
+
+Constructor of the class \hyperlink{classNetwork}{Network} 
+
+\subsection{Member Function Documentation}
+\hypertarget{classNetwork_accb4454cc984031041b277556634f646}{\index{Network@{Network}!update@{update}}
+\index{update@{update}!Network@{Network}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}void Network\-::update (
+\begin{DoxyParamCaption}
+\item[{size\-\_\-t}]{t\-\_\-start, }
+\item[{size\-\_\-t}]{t\-\_\-stop}
+\end{DoxyParamCaption}
+)}}\label{classNetwork_accb4454cc984031041b277556634f646}
+
+
+Update the network state from time t to t+\-T. 
+
+This function allows create the final graph ( figure 8). step1\-: it creates the file where we will stock the spike time the neurons. step2\-: create to loop for the simulation time. step3 \-: iterate on all the neurons in the network. step4 \-: for each neuron we have to call the update function ( from the class neuron ) to know the state. step5 \-: if the neuron spikes , we need the target all the connections to send them a signal step6 \-: all the targets receive a weight.
+
+
+\begin{DoxyParams}{Parameters}
+{\em t\-\_\-star} & \-: the initial time of the simulation \\
+\hline
+{\em t\-\_\-stop} & \-: the final time of the simulation \\
+\hline
+\end{DoxyParams}
+\hypertarget{classNetwork_a6291ac92355a8790b74dc7b327439e6f}{\index{Network@{Network}!Update\-\_\-connection@{Update\-\_\-connection}}
+\index{Update\-\_\-connection@{Update\-\_\-connection}!Network@{Network}}
+\subsubsection[{Update\-\_\-connection}]{\setlength{\rightskip}{0pt plus 5cm}void Network\-::\-Update\-\_\-connection (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classNetwork_a6291ac92355a8790b74dc7b327439e6f}
+
+
+fnction that add a target neuron in the table of the source neuron. 
+
+We generate uniformly distributed random numbers to generate connections between neurons. For each neuron of the network , we genereate Ci+\-Ce connections. We send the I\-D or the target neuron ( neuron that is connected with the source neuron) to a vector thanks to another function \-: connect() 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Network_8h}{Network.\-h}\item 
+Network.\-cpp\end{DoxyCompactItemize}

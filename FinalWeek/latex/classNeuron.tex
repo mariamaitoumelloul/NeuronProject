@@ -1,0 +1,219 @@
+\hypertarget{classNeuron}{\section{Neuron Class Reference}
+\label{classNeuron}\index{Neuron@{Neuron}}
+}
+
+
+class represanting a neuron  
+
+
+
+
+{\ttfamily \#include $<$Neuron.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classNeuron_ad2cbca7e3c44734701ba87af6bd6824c}{Neuron} (double a, double b, double I, double r)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+double \hyperlink{classNeuron_a753989d70b673c960b4a590c8302b5f3}{I\-\_\-time} (double time, double a, double b)
+\begin{DoxyCompactList}\small\item\em gives the current value during the simulation \end{DoxyCompactList}\item 
+void \hyperlink{classNeuron_a0950ac31ae1bbb3ed3d4bcb787c66e78}{Update} (double simtime, double I)
+\begin{DoxyCompactList}\small\item\em Update of the neuron state from time t to t+\-T. \end{DoxyCompactList}\item 
+double \hyperlink{classNeuron_ad501266805bd758f440a91fd4f48f276}{get\-\_\-spiketime} ()
+\begin{DoxyCompactList}\small\item\em Allows the access to a private attribute. \end{DoxyCompactList}\item 
+double \hyperlink{classNeuron_ae1d8f143ca337f9d37ef05c3978b46c7}{get\-\_\-membrane\-\_\-potentiel} ()
+\begin{DoxyCompactList}\small\item\em Allows the access to a private attribute. \end{DoxyCompactList}\item 
+int \hyperlink{classNeuron_a901a5dcb2cdf6b624d8b6b515b66ad7d}{get\-\_\-spike\-\_\-number} ()
+\begin{DoxyCompactList}\small\item\em Allows the access to a private attribute. \end{DoxyCompactList}\item 
+bool \hyperlink{classNeuron_a8bce8864e5fcd328585f01db61e93e71}{get\-\_\-spike\-State} ()
+\begin{DoxyCompactList}\small\item\em Allows the access to a private attribute. \end{DoxyCompactList}\item 
+void \hyperlink{classNeuron_ac29c1805fb20f82d8d660aa71984c8af}{receive} (double time, double J)
+\begin{DoxyCompactList}\small\item\em fonction that sends signal to the post-\/synaptic neuron. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{classNeuron_ae90ea57c6d9559c8adeb5c46ee6778e1}{borne\-\_\-inf}
+\item 
+double \hyperlink{classNeuron_af8db865bd7e1f841035fbd99c821dbed}{borne\-\_\-sup}
+\item 
+double \hyperlink{classNeuron_ae540cc540666b20457f914d7116eea24}{h}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+class represanting a neuron 
+
+The class handles the behaviour of one neuron When the potentiel of the neuronne membrane exceeds a certain value, The neuron spikes and enters a refractory period. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classNeuron_ad2cbca7e3c44734701ba87af6bd6824c}{\index{Neuron@{Neuron}!Neuron@{Neuron}}
+\index{Neuron@{Neuron}!Neuron@{Neuron}}
+\subsubsection[{Neuron}]{\setlength{\rightskip}{0pt plus 5cm}Neuron\-::\-Neuron (
+\begin{DoxyParamCaption}
+\item[{double}]{a, }
+\item[{double}]{b, }
+\item[{double}]{I, }
+\item[{double}]{r}
+\end{DoxyParamCaption}
+)}}\label{classNeuron_ad2cbca7e3c44734701ba87af6bd6824c}
+
+
+Constructor. 
+
+Constructor of the class \hyperlink{classNeuron}{Neuron}
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & lower bound of time from which I is different from zero \\
+\hline
+{\em b} & \-: superior bound of time from which I is different from zero \\
+\hline
+{\em I} & \-: external current \\
+\hline
+{\em r} & \-: the refractory time \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classNeuron_ae1d8f143ca337f9d37ef05c3978b46c7}{\index{Neuron@{Neuron}!get\-\_\-membrane\-\_\-potentiel@{get\-\_\-membrane\-\_\-potentiel}}
+\index{get\-\_\-membrane\-\_\-potentiel@{get\-\_\-membrane\-\_\-potentiel}!Neuron@{Neuron}}
+\subsubsection[{get\-\_\-membrane\-\_\-potentiel}]{\setlength{\rightskip}{0pt plus 5cm}double Neuron\-::get\-\_\-membrane\-\_\-potentiel (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classNeuron_ae1d8f143ca337f9d37ef05c3978b46c7}
+
+
+Allows the access to a private attribute. 
+
+\begin{DoxyReturn}{Returns}
+potentiel membrane 
+\end{DoxyReturn}
+\hypertarget{classNeuron_a901a5dcb2cdf6b624d8b6b515b66ad7d}{\index{Neuron@{Neuron}!get\-\_\-spike\-\_\-number@{get\-\_\-spike\-\_\-number}}
+\index{get\-\_\-spike\-\_\-number@{get\-\_\-spike\-\_\-number}!Neuron@{Neuron}}
+\subsubsection[{get\-\_\-spike\-\_\-number}]{\setlength{\rightskip}{0pt plus 5cm}int Neuron\-::get\-\_\-spike\-\_\-number (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classNeuron_a901a5dcb2cdf6b624d8b6b515b66ad7d}
+
+
+Allows the access to a private attribute. 
+
+\begin{DoxyReturn}{Returns}
+the number of spikes 
+\end{DoxyReturn}
+\hypertarget{classNeuron_a8bce8864e5fcd328585f01db61e93e71}{\index{Neuron@{Neuron}!get\-\_\-spike\-State@{get\-\_\-spike\-State}}
+\index{get\-\_\-spike\-State@{get\-\_\-spike\-State}!Neuron@{Neuron}}
+\subsubsection[{get\-\_\-spike\-State}]{\setlength{\rightskip}{0pt plus 5cm}bool Neuron\-::get\-\_\-spike\-State (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classNeuron_a8bce8864e5fcd328585f01db61e93e71}
+
+
+Allows the access to a private attribute. 
+
+\begin{DoxyReturn}{Returns}
+yes if the neuron spikes and no if it don't 
+\end{DoxyReturn}
+\hypertarget{classNeuron_ad501266805bd758f440a91fd4f48f276}{\index{Neuron@{Neuron}!get\-\_\-spiketime@{get\-\_\-spiketime}}
+\index{get\-\_\-spiketime@{get\-\_\-spiketime}!Neuron@{Neuron}}
+\subsubsection[{get\-\_\-spiketime}]{\setlength{\rightskip}{0pt plus 5cm}double Neuron\-::get\-\_\-spiketime (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classNeuron_ad501266805bd758f440a91fd4f48f276}
+
+
+Allows the access to a private attribute. 
+
+\begin{DoxyReturn}{Returns}
+the time of a spike 
+\end{DoxyReturn}
+\hypertarget{classNeuron_a753989d70b673c960b4a590c8302b5f3}{\index{Neuron@{Neuron}!I\-\_\-time@{I\-\_\-time}}
+\index{I\-\_\-time@{I\-\_\-time}!Neuron@{Neuron}}
+\subsubsection[{I\-\_\-time}]{\setlength{\rightskip}{0pt plus 5cm}double Neuron\-::\-I\-\_\-time (
+\begin{DoxyParamCaption}
+\item[{double}]{time, }
+\item[{double}]{a, }
+\item[{double}]{b}
+\end{DoxyParamCaption}
+)}}\label{classNeuron_a753989d70b673c960b4a590c8302b5f3}
+
+
+gives the current value during the simulation 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & \-: simulation time \\
+\hline
+{\em a} & \-:lower bound of time from which I is different from zero \\
+\hline
+{\em b} & \-:superior bound of time from which I is different from zero\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Iext if the simulation time is upper than a and lower than b 0 otherwise 
+\end{DoxyReturn}
+\hypertarget{classNeuron_ac29c1805fb20f82d8d660aa71984c8af}{\index{Neuron@{Neuron}!receive@{receive}}
+\index{receive@{receive}!Neuron@{Neuron}}
+\subsubsection[{receive}]{\setlength{\rightskip}{0pt plus 5cm}void Neuron\-::receive (
+\begin{DoxyParamCaption}
+\item[{double}]{time, }
+\item[{double}]{J}
+\end{DoxyParamCaption}
+)}}\label{classNeuron_ac29c1805fb20f82d8d660aa71984c8af}
+
+
+fonction that sends signal to the post-\/synaptic neuron. 
+
+If a neuron spikes , it sends J to the post-\/synaptic neuron , that respond after a certain delay.
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & \-: simulation time \\
+\hline
+{\em J} & \-: weight of the connexion \\
+\hline
+\end{DoxyParams}
+\hypertarget{classNeuron_a0950ac31ae1bbb3ed3d4bcb787c66e78}{\index{Neuron@{Neuron}!Update@{Update}}
+\index{Update@{Update}!Neuron@{Neuron}}
+\subsubsection[{Update}]{\setlength{\rightskip}{0pt plus 5cm}void Neuron\-::\-Update (
+\begin{DoxyParamCaption}
+\item[{double}]{simtime, }
+\item[{double}]{I}
+\end{DoxyParamCaption}
+)}}\label{classNeuron_a0950ac31ae1bbb3ed3d4bcb787c66e78}
+
+
+Update of the neuron state from time t to t+\-T. 
+
+This function allows to calculate the membrane potentiel of the neuronne and thus know if it spikes or not.
+
+
+\begin{DoxyParams}{Parameters}
+{\em simtime} & \-: simulation time \\
+\hline
+{\em I} & \-: external current \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classNeuron_ae90ea57c6d9559c8adeb5c46ee6778e1}{\index{Neuron@{Neuron}!borne\-\_\-inf@{borne\-\_\-inf}}
+\index{borne\-\_\-inf@{borne\-\_\-inf}!Neuron@{Neuron}}
+\subsubsection[{borne\-\_\-inf}]{\setlength{\rightskip}{0pt plus 5cm}double Neuron\-::borne\-\_\-inf}}\label{classNeuron_ae90ea57c6d9559c8adeb5c46ee6778e1}
+lower bound of time from which I is different from zero \hypertarget{classNeuron_af8db865bd7e1f841035fbd99c821dbed}{\index{Neuron@{Neuron}!borne\-\_\-sup@{borne\-\_\-sup}}
+\index{borne\-\_\-sup@{borne\-\_\-sup}!Neuron@{Neuron}}
+\subsubsection[{borne\-\_\-sup}]{\setlength{\rightskip}{0pt plus 5cm}double Neuron\-::borne\-\_\-sup}}\label{classNeuron_af8db865bd7e1f841035fbd99c821dbed}
+superior bound of time from which I is different from zero \hypertarget{classNeuron_ae540cc540666b20457f914d7116eea24}{\index{Neuron@{Neuron}!h@{h}}
+\index{h@{h}!Neuron@{Neuron}}
+\subsubsection[{h}]{\setlength{\rightskip}{0pt plus 5cm}double Neuron\-::h}}\label{classNeuron_ae540cc540666b20457f914d7116eea24}
+time step 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Neuron_8h}{Neuron.\-h}\item 
+Neuron.\-cpp\end{DoxyCompactItemize}
