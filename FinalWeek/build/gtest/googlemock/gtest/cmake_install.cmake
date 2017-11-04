@@ -1,4 +1,4 @@
-# Install script for directory: /home/INTRANET/aitoumel/myfiles/NeuronProject/gtest/googletest
+# Install script for directory: /home/INTRANET/aitoumel/myfiles/mariamaitoumelloul-cppcourse-brunel/FinalWeek/gtest/googletest
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -33,21 +33,21 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/home/INTRANET/aitoumel/myfiles/NeuronProject/build/gtest/googlemock/gtest/libgtest.a")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/home/INTRANET/aitoumel/myfiles/mariamaitoumelloul-cppcourse-brunel/FinalWeek/build/gtest/googlemock/gtest/libgtest.a")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/home/INTRANET/aitoumel/myfiles/NeuronProject/build/gtest/googlemock/gtest/libgtest_main.a")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/home/INTRANET/aitoumel/myfiles/mariamaitoumelloul-cppcourse-brunel/FinalWeek/build/gtest/googlemock/gtest/libgtest_main.a")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/INTRANET/aitoumel/myfiles/NeuronProject/gtest/googletest/include/gtest")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/INTRANET/aitoumel/myfiles/mariamaitoumelloul-cppcourse-brunel/FinalWeek/gtest/googletest/include/gtest")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES
-    "/home/INTRANET/aitoumel/myfiles/NeuronProject/build/gtest.pc"
-    "/home/INTRANET/aitoumel/myfiles/NeuronProject/build/gtest_main.pc"
+    "/home/INTRANET/aitoumel/myfiles/mariamaitoumelloul-cppcourse-brunel/FinalWeek/build/gtest.pc"
+    "/home/INTRANET/aitoumel/myfiles/mariamaitoumelloul-cppcourse-brunel/FinalWeek/build/gtest_main.pc"
     )
 endif()
 

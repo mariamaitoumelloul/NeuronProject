@@ -250,13 +250,13 @@ cxxabi.h
 acxx_demangle.h
 -
 
-/home/INTRANET/aitoumel/myfiles/NeuronProject/Neuron.cpp
+/home/INTRANET/aitoumel/myfiles/mariamaitoumelloul-cppcourse-brunel/FinalWeek/Neuron.cpp
 Neuron.h
-/home/INTRANET/aitoumel/myfiles/NeuronProject/Neuron.h
+/home/INTRANET/aitoumel/myfiles/mariamaitoumelloul-cppcourse-brunel/FinalWeek/Neuron.h
 iostream
 -
 
-/home/INTRANET/aitoumel/myfiles/NeuronProject/Neuron.h
+/home/INTRANET/aitoumel/myfiles/mariamaitoumelloul-cppcourse-brunel/FinalWeek/Neuron.h
 iostream
 -
 cmath
@@ -268,13 +268,13 @@ fstream
 random
 -
 
-/home/INTRANET/aitoumel/myfiles/NeuronProject/Neuron_unittest.cpp
+/home/INTRANET/aitoumel/myfiles/mariamaitoumelloul-cppcourse-brunel/FinalWeek/Neuron_unittest.cpp
 Neuron.h
-/home/INTRANET/aitoumel/myfiles/NeuronProject/Neuron.h
+/home/INTRANET/aitoumel/myfiles/mariamaitoumelloul-cppcourse-brunel/FinalWeek/Neuron.h
 gtest/googletest/include/gtest/gtest.h
-/home/INTRANET/aitoumel/myfiles/NeuronProject/gtest/googletest/include/gtest/gtest.h
+/home/INTRANET/aitoumel/myfiles/mariamaitoumelloul-cppcourse-brunel/FinalWeek/gtest/googletest/include/gtest/gtest.h
 
-/home/INTRANET/aitoumel/myfiles/NeuronProject/gtest/googletest/include/gtest/gtest.h
+/home/INTRANET/aitoumel/myfiles/mariamaitoumelloul-cppcourse-brunel/FinalWeek/gtest/googletest/include/gtest/gtest.h
 limits
 -
 ostream
@@ -282,23 +282,23 @@ ostream
 vector
 -
 gtest/internal/gtest-internal.h
-/home/INTRANET/aitoumel/myfiles/NeuronProject/gtest/googletest/include/gtest/gtest/internal/gtest-internal.h
+/home/INTRANET/aitoumel/myfiles/mariamaitoumelloul-cppcourse-brunel/FinalWeek/gtest/googletest/include/gtest/gtest/internal/gtest-internal.h
 gtest/internal/gtest-string.h
-/home/INTRANET/aitoumel/myfiles/NeuronProject/gtest/googletest/include/gtest/gtest/internal/gtest-string.h
+/home/INTRANET/aitoumel/myfiles/mariamaitoumelloul-cppcourse-brunel/FinalWeek/gtest/googletest/include/gtest/gtest/internal/gtest-string.h
 gtest/gtest-death-test.h
-/home/INTRANET/aitoumel/myfiles/NeuronProject/gtest/googletest/include/gtest/gtest/gtest-death-test.h
+/home/INTRANET/aitoumel/myfiles/mariamaitoumelloul-cppcourse-brunel/FinalWeek/gtest/googletest/include/gtest/gtest/gtest-death-test.h
 gtest/gtest-message.h
-/home/INTRANET/aitoumel/myfiles/NeuronProject/gtest/googletest/include/gtest/gtest/gtest-message.h
+/home/INTRANET/aitoumel/myfiles/mariamaitoumelloul-cppcourse-brunel/FinalWeek/gtest/googletest/include/gtest/gtest/gtest-message.h
 gtest/gtest-param-test.h
-/home/INTRANET/aitoumel/myfiles/NeuronProject/gtest/googletest/include/gtest/gtest/gtest-param-test.h
+/home/INTRANET/aitoumel/myfiles/mariamaitoumelloul-cppcourse-brunel/FinalWeek/gtest/googletest/include/gtest/gtest/gtest-param-test.h
 gtest/gtest-printers.h
-/home/INTRANET/aitoumel/myfiles/NeuronProject/gtest/googletest/include/gtest/gtest/gtest-printers.h
+/home/INTRANET/aitoumel/myfiles/mariamaitoumelloul-cppcourse-brunel/FinalWeek/gtest/googletest/include/gtest/gtest/gtest-printers.h
 gtest/gtest_prod.h
-/home/INTRANET/aitoumel/myfiles/NeuronProject/gtest/googletest/include/gtest/gtest/gtest_prod.h
+/home/INTRANET/aitoumel/myfiles/mariamaitoumelloul-cppcourse-brunel/FinalWeek/gtest/googletest/include/gtest/gtest/gtest_prod.h
 gtest/gtest-test-part.h
-/home/INTRANET/aitoumel/myfiles/NeuronProject/gtest/googletest/include/gtest/gtest/gtest-test-part.h
+/home/INTRANET/aitoumel/myfiles/mariamaitoumelloul-cppcourse-brunel/FinalWeek/gtest/googletest/include/gtest/gtest/gtest-test-part.h
 gtest/gtest-typed-test.h
-/home/INTRANET/aitoumel/myfiles/NeuronProject/gtest/googletest/include/gtest/gtest/gtest-typed-test.h
+/home/INTRANET/aitoumel/myfiles/mariamaitoumelloul-cppcourse-brunel/FinalWeek/gtest/googletest/include/gtest/gtest/gtest-typed-test.h
 gtest/gtest_pred_impl.h
-/home/INTRANET/aitoumel/myfiles/NeuronProject/gtest/googletest/include/gtest/gtest/gtest_pred_impl.h
+/home/INTRANET/aitoumel/myfiles/mariamaitoumelloul-cppcourse-brunel/FinalWeek/gtest/googletest/include/gtest/gtest/gtest_pred_impl.h
 

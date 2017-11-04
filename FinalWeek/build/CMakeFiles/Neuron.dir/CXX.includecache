@@ -6,13 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/home/INTRANET/aitoumel/myfiles/NeuronProject/Network.cpp
+/home/INTRANET/aitoumel/myfiles/mariamaitoumelloul-cppcourse-brunel/FinalWeek/Network.cpp
 iostream
 -
 Network.h
-/home/INTRANET/aitoumel/myfiles/NeuronProject/Network.h
+/home/INTRANET/aitoumel/myfiles/mariamaitoumelloul-cppcourse-brunel/FinalWeek/Network.h
 
-/home/INTRANET/aitoumel/myfiles/NeuronProject/Network.h
+/home/INTRANET/aitoumel/myfiles/mariamaitoumelloul-cppcourse-brunel/FinalWeek/Network.h
 iostream
 -
 cmath
@@ -22,17 +22,17 @@ vector
 random
 -
 Neuron.h
-/home/INTRANET/aitoumel/myfiles/NeuronProject/Neuron.h
+/home/INTRANET/aitoumel/myfiles/mariamaitoumelloul-cppcourse-brunel/FinalWeek/Neuron.h
 fstream
 -
 
-/home/INTRANET/aitoumel/myfiles/NeuronProject/Neuron.cpp
+/home/INTRANET/aitoumel/myfiles/mariamaitoumelloul-cppcourse-brunel/FinalWeek/Neuron.cpp
 Neuron.h
-/home/INTRANET/aitoumel/myfiles/NeuronProject/Neuron.h
+/home/INTRANET/aitoumel/myfiles/mariamaitoumelloul-cppcourse-brunel/FinalWeek/Neuron.h
 iostream
 -
 
-/home/INTRANET/aitoumel/myfiles/NeuronProject/Neuron.h
+/home/INTRANET/aitoumel/myfiles/mariamaitoumelloul-cppcourse-brunel/FinalWeek/Neuron.h
 iostream
 -
 cmath
@@ -44,17 +44,17 @@ fstream
 random
 -
 
-/home/INTRANET/aitoumel/myfiles/NeuronProject/TestNetwork.cpp
+/home/INTRANET/aitoumel/myfiles/mariamaitoumelloul-cppcourse-brunel/FinalWeek/TestNetwork.cpp
 iostream
 -
 Network.h
-/home/INTRANET/aitoumel/myfiles/NeuronProject/Network.h
+/home/INTRANET/aitoumel/myfiles/mariamaitoumelloul-cppcourse-brunel/FinalWeek/Network.h
 
-/home/INTRANET/aitoumel/myfiles/NeuronProject/TestNeuron.cpp
+/home/INTRANET/aitoumel/myfiles/mariamaitoumelloul-cppcourse-brunel/FinalWeek/TestNeuron.cpp
 iostream
 -
 Neuron.h
-/home/INTRANET/aitoumel/myfiles/NeuronProject/Neuron.h
+/home/INTRANET/aitoumel/myfiles/mariamaitoumelloul-cppcourse-brunel/FinalWeek/Neuron.h
 fstream
 -
 

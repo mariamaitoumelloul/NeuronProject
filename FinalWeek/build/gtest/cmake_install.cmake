@@ -1,4 +1,4 @@
-# Install script for directory: /home/INTRANET/aitoumel/myfiles/NeuronProject/gtest
+# Install script for directory: /home/INTRANET/aitoumel/myfiles/mariamaitoumelloul-cppcourse-brunel/FinalWeek/gtest
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,7 +34,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/INTRANET/aitoumel/myfiles/NeuronProject/build/gtest/googlemock/cmake_install.cmake")
+  include("/home/INTRANET/aitoumel/myfiles/mariamaitoumelloul-cppcourse-brunel/FinalWeek/build/gtest/googlemock/cmake_install.cmake")
 
 endif()
 

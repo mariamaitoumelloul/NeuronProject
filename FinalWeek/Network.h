@@ -107,7 +107,7 @@ class Network
 	 * \param t_stop : the final time of the simulation
 	 */
 	 
-    void update ( size_t t_start , size_t t_stop );
+    void update ( double t_start , double t_stop );
 };
 
 

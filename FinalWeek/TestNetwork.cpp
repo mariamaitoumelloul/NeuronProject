@@ -6,8 +6,8 @@ using namespace std;
 int main()
 {
 	Network n;
-	n.generate();
-	n.Update_connection();
+	//n.generate();
+	//n.Update_connection();
 	
 	
 	double t_start;

@@ -35,10 +35,10 @@ RM = /usr/local/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/INTRANET/aitoumel/myfiles/NeuronProject
+CMAKE_SOURCE_DIR = /home/INTRANET/aitoumel/myfiles/mariamaitoumelloul-cppcourse-brunel/FinalWeek
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/INTRANET/aitoumel/myfiles/NeuronProject/build
+CMAKE_BINARY_DIR = /home/INTRANET/aitoumel/myfiles/mariamaitoumelloul-cppcourse-brunel/FinalWeek/build
 
 # Utility rule file for doc.
 
@@ -46,7 +46,7 @@ CMAKE_BINARY_DIR = /home/INTRANET/aitoumel/myfiles/NeuronProject/build
 include CMakeFiles/doc.dir/progress.make
 
 CMakeFiles/doc:
-	cd /home/INTRANET/aitoumel/myfiles/NeuronProject && /usr/bin/doxygen /home/INTRANET/aitoumel/myfiles/NeuronProject/build/Doxyfile
+	cd /home/INTRANET/aitoumel/myfiles/mariamaitoumelloul-cppcourse-brunel/FinalWeek && /usr/bin/doxygen /home/INTRANET/aitoumel/myfiles/mariamaitoumelloul-cppcourse-brunel/FinalWeek/build/Doxyfile
 
 doc: CMakeFiles/doc
 doc: CMakeFiles/doc.dir/build.make
@@ -61,6 +61,6 @@ CMakeFiles/doc.dir/clean:
 .PHONY : CMakeFiles/doc.dir/clean
 
 CMakeFiles/doc.dir/depend:
-	cd /home/INTRANET/aitoumel/myfiles/NeuronProject/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/INTRANET/aitoumel/myfiles/NeuronProject /home/INTRANET/aitoumel/myfiles/NeuronProject /home/INTRANET/aitoumel/myfiles/NeuronProject/build /home/INTRANET/aitoumel/myfiles/NeuronProject/build /home/INTRANET/aitoumel/myfiles/NeuronProject/build/CMakeFiles/doc.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/INTRANET/aitoumel/myfiles/mariamaitoumelloul-cppcourse-brunel/FinalWeek/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/INTRANET/aitoumel/myfiles/mariamaitoumelloul-cppcourse-brunel/FinalWeek /home/INTRANET/aitoumel/myfiles/mariamaitoumelloul-cppcourse-brunel/FinalWeek /home/INTRANET/aitoumel/myfiles/mariamaitoumelloul-cppcourse-brunel/FinalWeek/build /home/INTRANET/aitoumel/myfiles/mariamaitoumelloul-cppcourse-brunel/FinalWeek/build /home/INTRANET/aitoumel/myfiles/mariamaitoumelloul-cppcourse-brunel/FinalWeek/build/CMakeFiles/doc.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/doc.dir/depend
 

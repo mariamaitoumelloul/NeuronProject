@@ -16,6 +16,8 @@ Network::Network()
 	Ce=1000;
 	Ci=250;
 	J=0.1;
+	generate();
+	Update_connection();
 	
 	
 }
@@ -38,7 +40,7 @@ void Network::generate()
 		
 		  Add_neuron();
 	}
-	cout << network.size() << endl;
+	//cout << network.size() << endl;
 }
 
  void Network::Update_connection()
@@ -83,16 +85,16 @@ void Network::connect( size_t t )
  
 
 
-void Network::update ( size_t t_start , size_t t_stop )
+void Network::update ( double t_start , double t_stop )
  {
      //creer un fichier
-     string file_name ("graphic.gdf");
+     string file_name ("graph.gdf");
      //open the exist flow
      ofstream exit;
-     exit.open("graphic.gdf");
+     exit.open("graph.gdf");
      double h;
      h=0.1;
-     size_t simtime;
+     double simtime;
 	 simtime=t_start;
 	 while ( simtime<t_stop)
 	 {
@@ -102,16 +104,16 @@ void Network::update ( size_t t_start , size_t t_stop )
 			 
 			
 			 network[n].Update(simtime, 0);
-			 bool state= network[n].get_spikeState();
+			
 			
 		
-		   if (state)
+		   if ( network[n].get_spikeState())
 		   {
 			   
-			   
+			  
+				   size_t id;
 			   for ( size_t i(0) ; i<target.size() ; ++i)
 			   {
-				   size_t id;
 				   id=target[i];
 				   if ( n<10000 )
 				   {
@@ -126,7 +128,7 @@ void Network::update ( size_t t_start , size_t t_stop )
 				   cerr <<"Error: impossible to open the file" << file_name << endl;
 			   }else{
 				   
-				   exit << "Neuron : " << n << '\t' << " Temps : " << network[n].get_spiketime() << '\t' << " Potentiel : " << network[n].get_membrane_potentiel() << '\n';
+				   exit  << n << '\t'  << network[n].get_spiketime() << '\n' ;
 							   
 			   }
 		   }
@@ -137,9 +139,10 @@ void Network::update ( size_t t_start , size_t t_stop )
 			
        }
           simtime+=h ;
-		 
+		
 	 }
 	 exit.close();
+	 cout << " FIN " << endl;
  }
 
 

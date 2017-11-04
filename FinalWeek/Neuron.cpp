@@ -44,12 +44,12 @@ void Neuron::Update (double simtime , double I)
 		
 		if ( membrane_potentiel>=V_thr)
 		{
-			
-			spiketime=simtime;
-			spike_number++;
 			spike_state=true;
+			spiketime=simtime;
+			//spike_number++;
+			
 			//membrane_potentiel=v_reset;
-			cout <<"spike"<< endl;
+			//cout <<"spike"<< endl;
 		}
 			
 		
@@ -57,30 +57,36 @@ void Neuron::Update (double simtime , double I)
 			if ((spike_number!=0 ) and(simtime>=spiketime) and (simtime<=spiketime+r_time))
 			{ 
 				membrane_potentiel=v_reset;
-				cout <<"refractory"<< endl;
-				spike_state=false;
+				//cout <<"refractory"<< endl;
+				//spike_state=false;
 				
 				
 			}else{
-				random_device rd;
-				mt19937 gen(rd());
-				poisson_distribution<> d(2);
-				membrane_potentiel=((C1*membrane_potentiel)+(Iext*C2)+ buffer[n%16])+d(gen)*J;
-				cout <<"normal"<< endl;
-				spike_state=false;
+				
+				
+				membrane_potentiel=((C1*membrane_potentiel)+(Iext*C2)+ buffer[n%16])+poisson()*J;
+				//cout <<"normal"<< endl;
+				//spike_state=false;
 				
 			}
 		
-	    cout <<"The number of spike is " << spike_number << endl;
+	    //cout <<"The number of spike is " << spike_number << endl;
 	    buffer[n%16]=0.0;
 	    
 	    
-	    if ( spike_state)
-	    { cout <<"true"<<endl; }
-	   
+	  
 
 	  
 				
+}
+
+int Neuron::poisson()
+{
+	static random_device rd;
+    static mt19937 gen(rd());
+    static poisson_distribution<> d(2);
+    
+    return d(gen);
 }
 
 double Neuron::get_spiketime()

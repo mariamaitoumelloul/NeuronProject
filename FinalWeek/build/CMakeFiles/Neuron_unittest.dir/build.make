@@ -35,10 +35,10 @@ RM = /usr/local/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/INTRANET/aitoumel/myfiles/NeuronProject
+CMAKE_SOURCE_DIR = /home/INTRANET/aitoumel/myfiles/mariamaitoumelloul-cppcourse-brunel/FinalWeek
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/INTRANET/aitoumel/myfiles/NeuronProject/build
+CMAKE_BINARY_DIR = /home/INTRANET/aitoumel/myfiles/mariamaitoumelloul-cppcourse-brunel/FinalWeek/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Neuron_unittest.dir/depend.make
@@ -51,17 +51,17 @@ include CMakeFiles/Neuron_unittest.dir/flags.make
 
 CMakeFiles/Neuron_unittest.dir/Neuron.cpp.o: CMakeFiles/Neuron_unittest.dir/flags.make
 CMakeFiles/Neuron_unittest.dir/Neuron.cpp.o: ../Neuron.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/INTRANET/aitoumel/myfiles/NeuronProject/build/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/INTRANET/aitoumel/myfiles/mariamaitoumelloul-cppcourse-brunel/FinalWeek/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Neuron_unittest.dir/Neuron.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Neuron_unittest.dir/Neuron.cpp.o -c /home/INTRANET/aitoumel/myfiles/NeuronProject/Neuron.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Neuron_unittest.dir/Neuron.cpp.o -c /home/INTRANET/aitoumel/myfiles/mariamaitoumelloul-cppcourse-brunel/FinalWeek/Neuron.cpp
 
 CMakeFiles/Neuron_unittest.dir/Neuron.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Neuron_unittest.dir/Neuron.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/INTRANET/aitoumel/myfiles/NeuronProject/Neuron.cpp > CMakeFiles/Neuron_unittest.dir/Neuron.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/INTRANET/aitoumel/myfiles/mariamaitoumelloul-cppcourse-brunel/FinalWeek/Neuron.cpp > CMakeFiles/Neuron_unittest.dir/Neuron.cpp.i
 
 CMakeFiles/Neuron_unittest.dir/Neuron.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Neuron_unittest.dir/Neuron.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/INTRANET/aitoumel/myfiles/NeuronProject/Neuron.cpp -o CMakeFiles/Neuron_unittest.dir/Neuron.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/INTRANET/aitoumel/myfiles/mariamaitoumelloul-cppcourse-brunel/FinalWeek/Neuron.cpp -o CMakeFiles/Neuron_unittest.dir/Neuron.cpp.s
 
 CMakeFiles/Neuron_unittest.dir/Neuron.cpp.o.requires:
 .PHONY : CMakeFiles/Neuron_unittest.dir/Neuron.cpp.o.requires
@@ -74,17 +74,17 @@ CMakeFiles/Neuron_unittest.dir/Neuron.cpp.o.provides.build: CMakeFiles/Neuron_un
 
 CMakeFiles/Neuron_unittest.dir/Neuron_unittest.cpp.o: CMakeFiles/Neuron_unittest.dir/flags.make
 CMakeFiles/Neuron_unittest.dir/Neuron_unittest.cpp.o: ../Neuron_unittest.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/INTRANET/aitoumel/myfiles/NeuronProject/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/INTRANET/aitoumel/myfiles/mariamaitoumelloul-cppcourse-brunel/FinalWeek/build/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Neuron_unittest.dir/Neuron_unittest.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Neuron_unittest.dir/Neuron_unittest.cpp.o -c /home/INTRANET/aitoumel/myfiles/NeuronProject/Neuron_unittest.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Neuron_unittest.dir/Neuron_unittest.cpp.o -c /home/INTRANET/aitoumel/myfiles/mariamaitoumelloul-cppcourse-brunel/FinalWeek/Neuron_unittest.cpp
 
 CMakeFiles/Neuron_unittest.dir/Neuron_unittest.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Neuron_unittest.dir/Neuron_unittest.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/INTRANET/aitoumel/myfiles/NeuronProject/Neuron_unittest.cpp > CMakeFiles/Neuron_unittest.dir/Neuron_unittest.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/INTRANET/aitoumel/myfiles/mariamaitoumelloul-cppcourse-brunel/FinalWeek/Neuron_unittest.cpp > CMakeFiles/Neuron_unittest.dir/Neuron_unittest.cpp.i
 
 CMakeFiles/Neuron_unittest.dir/Neuron_unittest.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Neuron_unittest.dir/Neuron_unittest.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/INTRANET/aitoumel/myfiles/NeuronProject/Neuron_unittest.cpp -o CMakeFiles/Neuron_unittest.dir/Neuron_unittest.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/INTRANET/aitoumel/myfiles/mariamaitoumelloul-cppcourse-brunel/FinalWeek/Neuron_unittest.cpp -o CMakeFiles/Neuron_unittest.dir/Neuron_unittest.cpp.s
 
 CMakeFiles/Neuron_unittest.dir/Neuron_unittest.cpp.o.requires:
 .PHONY : CMakeFiles/Neuron_unittest.dir/Neuron_unittest.cpp.o.requires
@@ -126,6 +126,6 @@ CMakeFiles/Neuron_unittest.dir/clean:
 .PHONY : CMakeFiles/Neuron_unittest.dir/clean
 
 CMakeFiles/Neuron_unittest.dir/depend:
-	cd /home/INTRANET/aitoumel/myfiles/NeuronProject/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/INTRANET/aitoumel/myfiles/NeuronProject /home/INTRANET/aitoumel/myfiles/NeuronProject /home/INTRANET/aitoumel/myfiles/NeuronProject/build /home/INTRANET/aitoumel/myfiles/NeuronProject/build /home/INTRANET/aitoumel/myfiles/NeuronProject/build/CMakeFiles/Neuron_unittest.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/INTRANET/aitoumel/myfiles/mariamaitoumelloul-cppcourse-brunel/FinalWeek/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/INTRANET/aitoumel/myfiles/mariamaitoumelloul-cppcourse-brunel/FinalWeek /home/INTRANET/aitoumel/myfiles/mariamaitoumelloul-cppcourse-brunel/FinalWeek /home/INTRANET/aitoumel/myfiles/mariamaitoumelloul-cppcourse-brunel/FinalWeek/build /home/INTRANET/aitoumel/myfiles/mariamaitoumelloul-cppcourse-brunel/FinalWeek/build /home/INTRANET/aitoumel/myfiles/mariamaitoumelloul-cppcourse-brunel/FinalWeek/build/CMakeFiles/Neuron_unittest.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/Neuron_unittest.dir/depend
 

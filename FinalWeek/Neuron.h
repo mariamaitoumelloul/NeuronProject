@@ -53,6 +53,14 @@ class Neuron
 	vector<double> buffer; /*!< tab that allows the post-synaptic neuron to receive the weight J after a certain delay*/
 	double J; /*!<weight of the neuron*/
 	
+	/*!
+	 * \brief function that simulate poisson distribution.
+	 * 
+	 * \return an integer randomly following poison distribution.
+	 */
+	 
+	int poisson();
+	
 	public:
 	
 	
