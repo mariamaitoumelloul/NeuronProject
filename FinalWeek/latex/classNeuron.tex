@@ -28,7 +28,9 @@ int \hyperlink{classNeuron_a901a5dcb2cdf6b624d8b6b515b66ad7d}{get\-\_\-spike\-\_
 bool \hyperlink{classNeuron_a8bce8864e5fcd328585f01db61e93e71}{get\-\_\-spike\-State} ()
 \begin{DoxyCompactList}\small\item\em Allows the access to a private attribute. \end{DoxyCompactList}\item 
 void \hyperlink{classNeuron_ac29c1805fb20f82d8d660aa71984c8af}{receive} (double time, double J)
-\begin{DoxyCompactList}\small\item\em fonction that sends signal to the post-\/synaptic neuron. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em function that sends signal to the post-\/synaptic neuron. \end{DoxyCompactList}\item 
+int \hyperlink{classNeuron_a23f6157b3d03d699414de8c6e1f3312c}{get\-\_\-steptime} (double time)
+\begin{DoxyCompactList}\small\item\em function that calculate the time step. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -132,6 +134,25 @@ Allows the access to a private attribute.
 \begin{DoxyReturn}{Returns}
 the time of a spike 
 \end{DoxyReturn}
+\hypertarget{classNeuron_a23f6157b3d03d699414de8c6e1f3312c}{\index{Neuron@{Neuron}!get\-\_\-steptime@{get\-\_\-steptime}}
+\index{get\-\_\-steptime@{get\-\_\-steptime}!Neuron@{Neuron}}
+\subsubsection[{get\-\_\-steptime}]{\setlength{\rightskip}{0pt plus 5cm}int Neuron\-::get\-\_\-steptime (
+\begin{DoxyParamCaption}
+\item[{double}]{time}
+\end{DoxyParamCaption}
+)}}\label{classNeuron_a23f6157b3d03d699414de8c6e1f3312c}
+
+
+function that calculate the time step. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & \-: simulation time\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\-: the time step. 
+\end{DoxyReturn}
 \hypertarget{classNeuron_a753989d70b673c960b4a590c8302b5f3}{\index{Neuron@{Neuron}!I\-\_\-time@{I\-\_\-time}}
 \index{I\-\_\-time@{I\-\_\-time}!Neuron@{Neuron}}
 \subsubsection[{I\-\_\-time}]{\setlength{\rightskip}{0pt plus 5cm}double Neuron\-::\-I\-\_\-time (
@@ -167,7 +188,7 @@ Iext if the simulation time is upper than a and lower than b 0 otherwise
 )}}\label{classNeuron_ac29c1805fb20f82d8d660aa71984c8af}
 
 
-fonction that sends signal to the post-\/synaptic neuron. 
+function that sends signal to the post-\/synaptic neuron. 
 
 If a neuron spikes , it sends J to the post-\/synaptic neuron , that respond after a certain delay.
 

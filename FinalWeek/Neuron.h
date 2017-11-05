@@ -18,7 +18,6 @@
  * 
  * espace de nommage
  */
-
 using namespace std;
 
 /*!
@@ -30,43 +29,41 @@ using namespace std;
  *  The neuron spikes and enters a refractory period.
  * 
  */
- 
 class Neuron
 {
 	
 	private:
 	
-	double v_reset; /*!< resting and reset value of the membrane potentiel*/
-	double V_thr; /*!< spike threshold*/
-	double tau; /*!< membrane time constant*/
-	double C; /*!< */
-	double R; /*!< membrane resistance*/
-	double Iext; /*!< */
-	double r_time; /*!< lapse of time where the neuron is refractory*/
-    double C1; /*!< constante C=(exp(-h/tau))*/
-	double C2; /*!< constance C=((1-exp(-h/tau))*R)*/
-    int spike_number;  /*!< number of spikes performed by the neuron*/
-	double spiketime;   /*!< time when the spike occurs*/                        
-	double membrane_potentiel;   /*!< value of the membrane potentiel*/
-    double D; /*!< synaptic delay*/
-	bool spike_state; /*!< indicates if the neuron spikes or not*/
-	vector<double> buffer; /*!< tab that allows the post-synaptic neuron to receive the weight J after a certain delay*/
-	double J; /*!<weight of the neuron*/
+	double v_reset;            /*!< resting and reset value of the membrane potentiel*/
+	double V_thr; 			   /*!< spike threshold*/
+	double tau;                /*!< membrane time constant*/
+	double C;                  /*!< C=R/tau*/
+	double R;                  /*!< membrane resistance*/
+	double Iext;               /*!<Value of the external current */
+	double r_time;             /*!< lapse of time where the neuron is refractory*/
+    double C1;                 /*!< constante C=(exp(-h/tau))*/
+	double C2;                 /*!< constance C=((1-exp(-h/tau))*R)*/
+    int spike_number;          /*!< number of spikes performed by the neuron*/
+	double spiketime;          /*!< time when the spike occurs*/                        
+	double membrane_potentiel; /*!< value of the membrane potentiel*/
+    double D;                  /*!< synaptic delay*/
+	bool spike_state;          /*!< indicates if the neuron spikes or not*/
+	vector<double> buffer;     /*!< tab that allows the post-synaptic neuron to receive the weight J after a certain delay*/
+	double J;                  /*!<weight of the neuron*/
 	
 	/*!
 	 * \brief function that simulate poisson distribution.
 	 * 
 	 * \return an integer randomly following poison distribution.
 	 */
-	 
 	int poisson();
+	
 	
 	public:
 	
-	
-	double borne_inf;  /*!< lower bound of time from which I is different from zero*/
-	double borne_sup; /*!< superior bound of time from which I is different from zero*/
-	double h; /*!< time step*/
+	double borne_inf;          /*!< lower bound of time from which I is different from zero*/
+	double borne_sup;          /*!< superior bound of time from which I is different from zero*/
+	double h;                  /*!< time step*/
 	
 	/*!
 	 * \brief Constructor
@@ -78,8 +75,8 @@ class Neuron
 	 * \param I : external current
 	 * \param r : the refractory time 
 	 */
-	 
 	Neuron(double a, double b , double I,double r);  
+	
 	
 	/*!
 	 * \brief gives the current value during the simulation
@@ -91,8 +88,8 @@ class Neuron
 	 * \return Iext if the simulation time is upper than a and lower than b 
 	 *         0 otherwise
 	 */
-	 
 	double I_time( double time, double a, double b);
+	
 	
 	/*!
 	 * \brief Update of the neuron state from time t to t+T
@@ -102,58 +99,60 @@ class Neuron
 	 * \param simtime : simulation time
 	 * \param I : external current
 	 */
-	 
 	void Update (double simtime, double I);
+	
 	
 	/*!
 	 * \brief Allows the access to a private attribute
 	 * 
 	 * \return the time of a spike
 	 */
-	 
 	double get_spiketime();
+	
 	
 	/*!
 	 * \brief Allows the access to a private attribute
 	 * 
 	 * \return potentiel membrane
 	 */
-	 
 	double get_membrane_potentiel();
+	
 	
 	/*!
 	 * \brief Allows the access to a private attribute
 	 * 
 	 * \return the number of spikes
 	 */
-	 
 	int get_spike_number();
+	
 	
 	/*!
 	 * \brief Allows the access to a private attribute
 	 * 
 	 * \return yes if the neuron spikes and no if it don't
 	 */
-	 
 	bool get_spikeState();
-	
 	 
 	 
 	/*!
-	 * \brief fonction that sends signal to the post-synaptic neuron.
+	 * \brief function that sends signal to the post-synaptic neuron.
 	 * 
 	 * If a neuron spikes , it sends J to the post-synaptic neuron , that respond after a certain delay.
 	 * 
 	 * \param time : simulation time
 	 * \param J : weight of the connexion
 	 */
-	 
 	void receive ( double time , double J);
 	
 	
-   
-
-	
+	/*!
+	 * \brief function that calculate the time step.
+	 * 
+	 * \param time : simulation time
+	 * 
+	 * \return : the time step.
+	 */
+	int get_steptime ( double time);
 	
 	
 };

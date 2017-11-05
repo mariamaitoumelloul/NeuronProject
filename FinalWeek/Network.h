@@ -19,8 +19,8 @@
  * 
  * espace de nommage
  */
-
 using namespace std;
+
 
 /*!
  * \class Network
@@ -28,29 +28,29 @@ using namespace std;
  * 
  * 
  */
- 
 class Network 
 
 {
-	
 	private:
 	
-	unsigned int N; /*!< Number of neurons in the network*/
-	unsigned int Ne;  /*!<Number of excitatory neurons*/
-	unsigned int Ni; /*!<Number of inhibitory neurons*/
-	unsigned int Ci;/*!<Number of inhibitory conexions*/
-	unsigned int Ce;/*!<Number of excitatory conexions*/
-	double g;  /*!<ratio of Ji and Je*/
-	double D;  /*!<Delay*/
+	unsigned int N;         /*!< Number of neurons in the network*/
+	unsigned int Ne;        /*!<Number of excitatory neurons*/
+	unsigned int Ni;        /*!<Number of inhibitory neurons*/
+	unsigned int Ci;        /*!<Number of inhibitory conexions*/
+	unsigned int Ce;        /*!<Number of excitatory conexions*/
+	double g;               /*!<ratio of Ji and Je*/
+	double D;               /*!<Delay*/
 	vector<Neuron> network; /*!<table containning all the N neurons of the network*/
-	double J; /*!<weight of the connection beetween an excitatory neuron and another one*/
-	vector<int>target; /*!<table that contains all the target neurons for a source neuron. (= all the neurons that are connecte to one fixed neuron)*/
-	
+	double J;               /*!<weight of the connection beetween an excitatory neuron and another one*/
+	vector<int>target;      /*!<table that contains all the target neurons for a source neuron. (= all the neurons that are connecte to one fixed neuron)*/
+	double h;               /*!< time step*/
+
+
 	/*!
 	 * \brief function that creates a neuron and add it to the network.
 	 */
-	 
 	void Add_neuron(); 
+	
 	
 	/*!
 	 * \brief function that add a target neuron in the table of the source neuron.
@@ -58,11 +58,9 @@ class Network
 	 * \param target: the neuron that is connected with the source neuron.
 	 * 
 	 */
-	 
 	void connect ( size_t target );
 	
-	
-	
+
 	public :
 	
 	/*!
@@ -71,15 +69,15 @@ class Network
 	 * Constructor of the class Network
 	 *
 	 */
-	 
 	Network(); 
+	
 	
 	/*!
 	 * \brief fonction that add N neurons in the network thanks to the function add_neuron()
 	 * 
 	 */
-	 
     void generate();
+    
     
     /*!
 	 * \brief fnction that add a target neuron in the table of the source neuron.
@@ -89,8 +87,8 @@ class Network
 	 * We send the ID or the target neuron ( neuron that is connected with the source neuron) to a vector thanks to another function : connect()
 	 * 
 	 */
-	 
     void Update_connection();
+    
     
     /*!
 	 * \brief Update the network state from time t to t+T
@@ -106,8 +104,8 @@ class Network
 	 * \param t_star : the initial time of the simulation
 	 * \param t_stop : the final time of the simulation
 	 */
-	 
     void update ( double t_start , double t_stop );
+    
 };
 
 
