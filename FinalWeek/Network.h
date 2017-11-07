@@ -38,12 +38,12 @@ class Network
 	unsigned int Ni;        /*!<Number of inhibitory neurons*/
 	unsigned int Ci;        /*!<Number of inhibitory conexions*/
 	unsigned int Ce;        /*!<Number of excitatory conexions*/
-	double g;               /*!<ratio of Ji and Je*/
-	double D;               /*!<Delay*/
+	static constexpr double g = 5.0;               /*!<ratio of Ji and Je*/
+	static constexpr double D = 1.5;               /*!<Delay*/
 	vector<Neuron> network; /*!<table containning all the N neurons of the network*/
 	double J;               /*!<weight of the connection beetween an excitatory neuron and another one*/
-	vector<int>target;      /*!<table that contains all the target neurons for a source neuron. (= all the neurons that are connecte to one fixed neuron)*/
-	double h;               /*!< time step*/
+	static constexpr double h = 0.1;               /*!< time step*/
+	double weight;
 
 
 	/*!
@@ -51,14 +51,6 @@ class Network
 	 */
 	void Add_neuron(); 
 	
-	
-	/*!
-	 * \brief function that add a target neuron in the table of the source neuron.
-	 * 
-	 * \param target: the neuron that is connected with the source neuron.
-	 * 
-	 */
-	void connect ( size_t target );
 	
 
 	public :

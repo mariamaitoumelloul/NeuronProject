@@ -34,29 +34,30 @@ class Neuron
 	
 	private:
 	
-	double v_reset;            /*!< resting and reset value of the membrane potentiel*/
-	double V_thr; 			   /*!< spike threshold*/
-	double tau;                /*!< membrane time constant*/
-	double C;                  /*!< C=R/tau*/
-	double R;                  /*!< membrane resistance*/
+	static constexpr double v_reset = 0.0;            /*!< resting and reset value of the membrane potentiel*/
+	static constexpr double V_thr = 20; 			   /*!< spike threshold*/
+	static constexpr double tau = 20;                /*!< membrane time constant*/
+	static constexpr double C = 1;                  /*!< C=R/tau*/
+	static constexpr double R = tau/C;                  /*!< membrane resistance*/
 	double Iext;               /*!<Value of the external current */
-	double r_time;             /*!< lapse of time where the neuron is refractory*/
+	static constexpr double r_time = 2;             /*!< lapse of time where the neuron is refractory*/
     double C1;                 /*!< constante C=(exp(-h/tau))*/
 	double C2;                 /*!< constance C=((1-exp(-h/tau))*R)*/
     int spike_number;          /*!< number of spikes performed by the neuron*/
 	double spiketime;          /*!< time when the spike occurs*/                        
 	double membrane_potentiel; /*!< value of the membrane potentiel*/
-    double D;                  /*!< synaptic delay*/
+    static constexpr double D = 1.5;                  /*!< synaptic delay*/
 	bool spike_state;          /*!< indicates if the neuron spikes or not*/
 	vector<double> buffer;     /*!< tab that allows the post-synaptic neuron to receive the weight J after a certain delay*/
 	double J;                  /*!<weight of the neuron*/
+	vector<int>target;      /*!<table that contains all the target neurons for a source neuron. (= all the neurons that are connecte to one fixed neuron)*/
 	
 	/*!
 	 * \brief function that simulate poisson distribution.
 	 * 
 	 * \return an integer randomly following poison distribution.
 	 */
-	int poisson();
+	//int poisson();
 	
 	
 	public:
@@ -73,9 +74,8 @@ class Neuron
 	 * \param a: lower bound of time from which I is different from zero
 	 * \param b : superior bound of time from which I is different from zero
 	 * \param I : external current
-	 * \param r : the refractory time 
 	 */
-	Neuron(double a, double b , double I,double r);  
+	Neuron(double a, double b , double I, double j);  
 	
 	
 	/*!
@@ -99,7 +99,7 @@ class Neuron
 	 * \param simtime : simulation time
 	 * \param I : external current
 	 */
-	void Update (double simtime, double I);
+	void Update (double simtime, double I , double poisson , double w);
 	
 	
 	/*!
@@ -153,6 +153,14 @@ class Neuron
 	 * \return : the time step.
 	 */
 	int get_steptime ( double time);
+	
+	/*!
+	 * \brief function that add a target neuron in the table of the source neuron.
+	 * 
+	 * \param target: the neuron that is connected with the source neuron.
+	 * 
+	 */
+	void connect ( size_t target );
 	
 	
 };
