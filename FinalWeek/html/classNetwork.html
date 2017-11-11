@@ -99,13 +99,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3cc2fb4f8fa4d507077e8da85ce5a1c8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNetwork.html#a3cc2fb4f8fa4d507077e8da85ce5a1c8">Network</a> ()</td></tr>
 <tr class="memdesc:a3cc2fb4f8fa4d507077e8da85ce5a1c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#a3cc2fb4f8fa4d507077e8da85ce5a1c8">More...</a><br/></td></tr>
 <tr class="separator:a3cc2fb4f8fa4d507077e8da85ce5a1c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ada5ad9d86ab3d81803140410e22d82af"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ada5ad9d86ab3d81803140410e22d82af"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNetwork.html#ada5ad9d86ab3d81803140410e22d82af">generate</a> ()</td></tr>
-<tr class="memdesc:ada5ad9d86ab3d81803140410e22d82af"><td class="mdescLeft">&#160;</td><td class="mdescRight">fonction that add N neurons in the network thanks to the function add_neuron() <br/></td></tr>
-<tr class="separator:ada5ad9d86ab3d81803140410e22d82af"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6291ac92355a8790b74dc7b327439e6f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNetwork.html#a6291ac92355a8790b74dc7b327439e6f">Update_connection</a> ()</td></tr>
-<tr class="memdesc:a6291ac92355a8790b74dc7b327439e6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">fnction that add a target neuron in the table of the source neuron.  <a href="#a6291ac92355a8790b74dc7b327439e6f">More...</a><br/></td></tr>
-<tr class="separator:a6291ac92355a8790b74dc7b327439e6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a34225847b28e9acd8132c591a9dbd7c4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNetwork.html#a34225847b28e9acd8132c591a9dbd7c4">update</a> (double t_start, double t_stop)</td></tr>
 <tr class="memdesc:a34225847b28e9acd8132c591a9dbd7c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the network state from time t to t+T.  <a href="#a34225847b28e9acd8132c591a9dbd7c4">More...</a><br/></td></tr>
 <tr class="separator:a34225847b28e9acd8132c591a9dbd7c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -127,7 +120,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </div><div class="memdoc">
 
 <p>Constructor. </p>
-<p>Constructor of the class <a class="el" href="classNetwork.html" title="class represanting neurons conexions ">Network</a> </p>
+<p>Constructor of the class <a class="el" href="classNetwork.html" title="class represanting neurons conexions ">Network</a> Gives the right values to the atributs and generates a network. </p>
 
 </div>
 </div>
@@ -168,24 +161,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 
 </div>
 </div>
-<a class="anchor" id="a6291ac92355a8790b74dc7b327439e6f"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Network::Update_connection </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>fnction that add a target neuron in the table of the source neuron. </p>
-<p>We generate uniformly distributed random numbers to generate connections between neurons. For each neuron of the network , we genereate Ci+Ce connections. We send the ID or the target neuron ( neuron that is connected with the source neuron) to a vector thanks to another function : connect() </p>
-
-</div>
-</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="Network_8h_source.html">Network.h</a></li>
 <li>Network.cpp</li>
@@ -193,7 +168,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Nov 5 2017 14:15:18 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Nov 11 2017 11:02:30 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

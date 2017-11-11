@@ -34,30 +34,30 @@ class Neuron
 	
 	private:
 	
-	static constexpr double v_reset = 0.0;            /*!< resting and reset value of the membrane potentiel*/
-	static constexpr double V_thr = 20; 			   /*!< spike threshold*/
-	static constexpr double tau = 20;                /*!< membrane time constant*/
-	static constexpr double C = 1;                  /*!< C=R/tau*/
-	static constexpr double R = tau/C;                  /*!< membrane resistance*/
-	double Iext;               /*!<Value of the external current */
-	static constexpr double r_time = 2;             /*!< lapse of time where the neuron is refractory*/
-    double C1;                 /*!< constante C=(exp(-h/tau))*/
-	double C2;                 /*!< constance C=((1-exp(-h/tau))*R)*/
-    int spike_number;          /*!< number of spikes performed by the neuron*/
-	double spiketime;          /*!< time when the spike occurs*/                        
-	double membrane_potentiel; /*!< value of the membrane potentiel*/
-    static constexpr double D = 1.5;                  /*!< synaptic delay*/
-	bool spike_state;          /*!< indicates if the neuron spikes or not*/
-	vector<double> buffer;     /*!< tab that allows the post-synaptic neuron to receive the weight J after a certain delay*/
-	double J;                  /*!<weight of the neuron*/
-	vector<int>target;      /*!<table that contains all the target neurons for a source neuron. (= all the neurons that are connecte to one fixed neuron)*/
+	static constexpr double v_reset = 0.0;   /*!< resting and reset value of the membrane potentiel*/
+	static constexpr double V_thr = 20;      /*!< spike threshold*/
+	static constexpr double tau = 20;        /*!< membrane time constant*/
+	static constexpr double C = 1;           /*!< constant that is equal to: C=R/tau*/
+	static constexpr double R = tau/C;       /*!< membrane resistance*/
+	double Iext;                             /*!<Value of the external current */
+	static constexpr double r_time = 2;      /*!< lapse of time where the neuron is refractory*/
+    double C1;                               /*!< constante C=(exp(-h/tau))*/
+	double C2;                               /*!< constance C=((1-exp(-h/tau))*R)*/
+    int spike_number;                        /*!< number of spikes performed by the neuron*/
+	double spiketime;                        /*!< time when the spike occurs*/                        
+	double membrane_potentiel;               /*!< value of the membrane potentiel*/
+    static constexpr double D = 1.5;         /*!< synaptic delay*/
+	bool spike_state;                        /*!< indicates if the neuron spikes or not*/
+	vector<double> buffer;                   /*!< tab that allows the post-synaptic neuron to receive the weight J after a certain delay*/
+	double J;                                /*!<weight of the neuron connexion*/
+	vector<int>target;                       /*!<table that contains all the target neurons for a source neuron. (= all the neurons that are connected to one fixed neuron)*/
 	
 	/*!
 	 * \brief function that simulate poisson distribution.
 	 * 
 	 * \return an integer randomly following poison distribution.
 	 */
-	//int poisson();
+	
 	
 	
 	public:
@@ -74,12 +74,15 @@ class Neuron
 	 * \param a: lower bound of time from which I is different from zero
 	 * \param b : superior bound of time from which I is different from zero
 	 * \param I : external current
+	 * \param j : weight of the neuron conection
 	 */
 	Neuron(double a, double b , double I, double j);  
 	
 	
 	/*!
 	 * \brief gives the current value during the simulation
+	 * 
+	 * This function was only used in the begining of the project , when we created one neuron.
 	 * 
 	 * \param time : simulation time
 	 * \param a :lower bound of time from which I is different from zero
@@ -98,6 +101,8 @@ class Neuron
 	 * 
 	 * \param simtime : simulation time
 	 * \param I : external current
+	 * \param poisson : double that shows random spikes from the rest of the brain
+	 * \param w : the weight of the connection
 	 */
 	void Update (double simtime, double I , double poisson , double w);
 	
@@ -129,7 +134,7 @@ class Neuron
 	/*!
 	 * \brief Allows the access to a private attribute
 	 * 
-	 * \return yes if the neuron spikes and no if it don't
+	 * \return true if the neuron spikes and false if it don't
 	 */
 	bool get_spikeState();
 	 
@@ -148,14 +153,19 @@ class Neuron
 	/*!
 	 * \brief function that calculate the time step.
 	 * 
+	 * In my program ,I use time in ms for the implementation of the clock. But as we work with steps in the functions "update" and "receive", this function allows to convert time(ms) in steps.
+	 * 
 	 * \param time : simulation time
 	 * 
 	 * \return : the time step.
 	 */
 	int get_steptime ( double time);
 	
+	
 	/*!
 	 * \brief function that add a target neuron in the table of the source neuron.
+	 * 
+	 * At the end , this function generate a table of 1250 boxes that contain the id of the neurons connected to the source neuron.
 	 * 
 	 * \param target: the neuron that is connected with the source neuron.
 	 * 

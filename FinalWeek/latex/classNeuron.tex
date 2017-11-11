@@ -13,11 +13,11 @@ class represanting a neuron
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classNeuron_ad2cbca7e3c44734701ba87af6bd6824c}{Neuron} (double a, double b, double I, double r)
+\hyperlink{classNeuron_ae47d6f60ba82e110f62876cee0efbf42}{Neuron} (double a, double b, double I, double j)
 \begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
 double \hyperlink{classNeuron_a753989d70b673c960b4a590c8302b5f3}{I\-\_\-time} (double time, double a, double b)
 \begin{DoxyCompactList}\small\item\em gives the current value during the simulation \end{DoxyCompactList}\item 
-void \hyperlink{classNeuron_a0950ac31ae1bbb3ed3d4bcb787c66e78}{Update} (double simtime, double I)
+void \hyperlink{classNeuron_aa2ca01def67beb96052f5d24253e6c65}{Update} (double simtime, double I, double poisson, double w)
 \begin{DoxyCompactList}\small\item\em Update of the neuron state from time t to t+\-T. \end{DoxyCompactList}\item 
 double \hyperlink{classNeuron_ad501266805bd758f440a91fd4f48f276}{get\-\_\-spiketime} ()
 \begin{DoxyCompactList}\small\item\em Allows the access to a private attribute. \end{DoxyCompactList}\item 
@@ -30,12 +30,14 @@ bool \hyperlink{classNeuron_a8bce8864e5fcd328585f01db61e93e71}{get\-\_\-spike\-S
 void \hyperlink{classNeuron_ac29c1805fb20f82d8d660aa71984c8af}{receive} (double time, double J)
 \begin{DoxyCompactList}\small\item\em function that sends signal to the post-\/synaptic neuron. \end{DoxyCompactList}\item 
 int \hyperlink{classNeuron_a23f6157b3d03d699414de8c6e1f3312c}{get\-\_\-steptime} (double time)
-\begin{DoxyCompactList}\small\item\em function that calculate the time step. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em function that calculate the time step. \end{DoxyCompactList}\item 
+void \hyperlink{classNeuron_aea177be15705611f01e31fbef4a2beb3}{connect} (size\-\_\-t target)
+\begin{DoxyCompactList}\small\item\em function that add a target neuron in the table of the source neuron. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
 double \hyperlink{classNeuron_ae90ea57c6d9559c8adeb5c46ee6778e1}{borne\-\_\-inf}
-\item 
+\begin{DoxyCompactList}\small\item\em function that simulate poisson distribution. \end{DoxyCompactList}\item 
 double \hyperlink{classNeuron_af8db865bd7e1f841035fbd99c821dbed}{borne\-\_\-sup}
 \item 
 double \hyperlink{classNeuron_ae540cc540666b20457f914d7116eea24}{h}
@@ -48,16 +50,16 @@ class represanting a neuron
 The class handles the behaviour of one neuron When the potentiel of the neuronne membrane exceeds a certain value, The neuron spikes and enters a refractory period. 
 
 \subsection{Constructor \& Destructor Documentation}
-\hypertarget{classNeuron_ad2cbca7e3c44734701ba87af6bd6824c}{\index{Neuron@{Neuron}!Neuron@{Neuron}}
+\hypertarget{classNeuron_ae47d6f60ba82e110f62876cee0efbf42}{\index{Neuron@{Neuron}!Neuron@{Neuron}}
 \index{Neuron@{Neuron}!Neuron@{Neuron}}
 \subsubsection[{Neuron}]{\setlength{\rightskip}{0pt plus 5cm}Neuron\-::\-Neuron (
 \begin{DoxyParamCaption}
 \item[{double}]{a, }
 \item[{double}]{b, }
 \item[{double}]{I, }
-\item[{double}]{r}
+\item[{double}]{j}
 \end{DoxyParamCaption}
-)}}\label{classNeuron_ad2cbca7e3c44734701ba87af6bd6824c}
+)}}\label{classNeuron_ae47d6f60ba82e110f62876cee0efbf42}
 
 
 Constructor. 
@@ -72,12 +74,30 @@ Constructor of the class \hyperlink{classNeuron}{Neuron}
 \hline
 {\em I} & \-: external current \\
 \hline
-{\em r} & \-: the refractory time \\
+{\em j} & \-: weight of the neuron conection \\
 \hline
 \end{DoxyParams}
 
 
 \subsection{Member Function Documentation}
+\hypertarget{classNeuron_aea177be15705611f01e31fbef4a2beb3}{\index{Neuron@{Neuron}!connect@{connect}}
+\index{connect@{connect}!Neuron@{Neuron}}
+\subsubsection[{connect}]{\setlength{\rightskip}{0pt plus 5cm}void Neuron\-::connect (
+\begin{DoxyParamCaption}
+\item[{size\-\_\-t}]{target}
+\end{DoxyParamCaption}
+)}}\label{classNeuron_aea177be15705611f01e31fbef4a2beb3}
+
+
+function that add a target neuron in the table of the source neuron. 
+
+At the end , this function generate a table of 1250 boxes that contain the id of the neurons connected to the source neuron.
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & the neuron that is connected with the source neuron. \\
+\hline
+\end{DoxyParams}
 \hypertarget{classNeuron_ae1d8f143ca337f9d37ef05c3978b46c7}{\index{Neuron@{Neuron}!get\-\_\-membrane\-\_\-potentiel@{get\-\_\-membrane\-\_\-potentiel}}
 \index{get\-\_\-membrane\-\_\-potentiel@{get\-\_\-membrane\-\_\-potentiel}!Neuron@{Neuron}}
 \subsubsection[{get\-\_\-membrane\-\_\-potentiel}]{\setlength{\rightskip}{0pt plus 5cm}double Neuron\-::get\-\_\-membrane\-\_\-potentiel (
@@ -118,7 +138,7 @@ the number of spikes
 Allows the access to a private attribute. 
 
 \begin{DoxyReturn}{Returns}
-yes if the neuron spikes and no if it don't 
+true if the neuron spikes and false if it don't 
 \end{DoxyReturn}
 \hypertarget{classNeuron_ad501266805bd758f440a91fd4f48f276}{\index{Neuron@{Neuron}!get\-\_\-spiketime@{get\-\_\-spiketime}}
 \index{get\-\_\-spiketime@{get\-\_\-spiketime}!Neuron@{Neuron}}
@@ -145,6 +165,8 @@ the time of a spike
 
 function that calculate the time step. 
 
+In my program ,I use time in ms for the implementation of the clock. But as we work with steps in the functions \char`\"{}update\char`\"{} and \char`\"{}receive\char`\"{}, this function allows to convert time(ms) in steps.
+
 
 \begin{DoxyParams}{Parameters}
 {\em time} & \-: simulation time\\
@@ -165,6 +187,8 @@ function that calculate the time step.
 
 
 gives the current value during the simulation 
+
+This function was only used in the begining of the project , when we created one neuron.
 
 
 \begin{DoxyParams}{Parameters}
@@ -199,14 +223,16 @@ If a neuron spikes , it sends J to the post-\/synaptic neuron , that respond aft
 {\em J} & \-: weight of the connexion \\
 \hline
 \end{DoxyParams}
-\hypertarget{classNeuron_a0950ac31ae1bbb3ed3d4bcb787c66e78}{\index{Neuron@{Neuron}!Update@{Update}}
+\hypertarget{classNeuron_aa2ca01def67beb96052f5d24253e6c65}{\index{Neuron@{Neuron}!Update@{Update}}
 \index{Update@{Update}!Neuron@{Neuron}}
 \subsubsection[{Update}]{\setlength{\rightskip}{0pt plus 5cm}void Neuron\-::\-Update (
 \begin{DoxyParamCaption}
 \item[{double}]{simtime, }
-\item[{double}]{I}
+\item[{double}]{I, }
+\item[{double}]{poisson, }
+\item[{double}]{w}
 \end{DoxyParamCaption}
-)}}\label{classNeuron_a0950ac31ae1bbb3ed3d4bcb787c66e78}
+)}}\label{classNeuron_aa2ca01def67beb96052f5d24253e6c65}
 
 
 Update of the neuron state from time t to t+\-T. 
@@ -219,6 +245,10 @@ This function allows to calculate the membrane potentiel of the neuronne and thu
 \hline
 {\em I} & \-: external current \\
 \hline
+{\em poisson} & \-: double that shows random spikes from the rest of the brain \\
+\hline
+{\em w} & \-: the weight of the connection \\
+\hline
 \end{DoxyParams}
 
 
@@ -226,7 +256,14 @@ This function allows to calculate the membrane potentiel of the neuronne and thu
 \hypertarget{classNeuron_ae90ea57c6d9559c8adeb5c46ee6778e1}{\index{Neuron@{Neuron}!borne\-\_\-inf@{borne\-\_\-inf}}
 \index{borne\-\_\-inf@{borne\-\_\-inf}!Neuron@{Neuron}}
 \subsubsection[{borne\-\_\-inf}]{\setlength{\rightskip}{0pt plus 5cm}double Neuron\-::borne\-\_\-inf}}\label{classNeuron_ae90ea57c6d9559c8adeb5c46ee6778e1}
-lower bound of time from which I is different from zero \hypertarget{classNeuron_af8db865bd7e1f841035fbd99c821dbed}{\index{Neuron@{Neuron}!borne\-\_\-sup@{borne\-\_\-sup}}
+
+
+function that simulate poisson distribution. 
+
+\begin{DoxyReturn}{Returns}
+an integer randomly following poison distribution.\-lower bound of time from which I is different from zero 
+\end{DoxyReturn}
+\hypertarget{classNeuron_af8db865bd7e1f841035fbd99c821dbed}{\index{Neuron@{Neuron}!borne\-\_\-sup@{borne\-\_\-sup}}
 \index{borne\-\_\-sup@{borne\-\_\-sup}!Neuron@{Neuron}}
 \subsubsection[{borne\-\_\-sup}]{\setlength{\rightskip}{0pt plus 5cm}double Neuron\-::borne\-\_\-sup}}\label{classNeuron_af8db865bd7e1f841035fbd99c821dbed}
 superior bound of time from which I is different from zero \hypertarget{classNeuron_ae540cc540666b20457f914d7116eea24}{\index{Neuron@{Neuron}!h@{h}}

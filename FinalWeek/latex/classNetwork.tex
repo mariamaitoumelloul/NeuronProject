@@ -15,11 +15,6 @@ class represanting neurons conexions
 \item 
 \hyperlink{classNetwork_a3cc2fb4f8fa4d507077e8da85ce5a1c8}{Network} ()
 \begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
-\hypertarget{classNetwork_ada5ad9d86ab3d81803140410e22d82af}{void \hyperlink{classNetwork_ada5ad9d86ab3d81803140410e22d82af}{generate} ()}\label{classNetwork_ada5ad9d86ab3d81803140410e22d82af}
-
-\begin{DoxyCompactList}\small\item\em fonction that add N neurons in the network thanks to the function add\-\_\-neuron() \end{DoxyCompactList}\item 
-void \hyperlink{classNetwork_a6291ac92355a8790b74dc7b327439e6f}{Update\-\_\-connection} ()
-\begin{DoxyCompactList}\small\item\em fnction that add a target neuron in the table of the source neuron. \end{DoxyCompactList}\item 
 void \hyperlink{classNetwork_a34225847b28e9acd8132c591a9dbd7c4}{update} (double t\-\_\-start, double t\-\_\-stop)
 \begin{DoxyCompactList}\small\item\em Update the network state from time t to t+\-T. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
@@ -39,7 +34,7 @@ class represanting neurons conexions
 
 Constructor. 
 
-Constructor of the class \hyperlink{classNetwork}{Network} 
+Constructor of the class \hyperlink{classNetwork}{Network} Gives the right values to the atributs and generates a network. 
 
 \subsection{Member Function Documentation}
 \hypertarget{classNetwork_a34225847b28e9acd8132c591a9dbd7c4}{\index{Network@{Network}!update@{update}}
@@ -63,18 +58,7 @@ This function allows create the final graph ( figure 8). step1\-: it creates the
 {\em t\-\_\-stop} & \-: the final time of the simulation \\
 \hline
 \end{DoxyParams}
-\hypertarget{classNetwork_a6291ac92355a8790b74dc7b327439e6f}{\index{Network@{Network}!Update\-\_\-connection@{Update\-\_\-connection}}
-\index{Update\-\_\-connection@{Update\-\_\-connection}!Network@{Network}}
-\subsubsection[{Update\-\_\-connection}]{\setlength{\rightskip}{0pt plus 5cm}void Network\-::\-Update\-\_\-connection (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)}}\label{classNetwork_a6291ac92355a8790b74dc7b327439e6f}
 
-
-fnction that add a target neuron in the table of the source neuron. 
-
-We generate uniformly distributed random numbers to generate connections between neurons. For each neuron of the network , we genereate Ci+\-Ce connections. We send the I\-D or the target neuron ( neuron that is connected with the source neuron) to a vector thanks to another function \-: connect() 
 
 The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
 \item 

@@ -3,6 +3,11 @@
 #include <fstream>
 using namespace std;
 
+/// 
+///This is the main of the neuron class.
+///We don't use it when we work with the network
+///We can only use it to simulation the creation of a neuron or the conection between two neurons.
+///
 
 /*
 int main()

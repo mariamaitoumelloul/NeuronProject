@@ -97,15 +97,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ad2cbca7e3c44734701ba87af6bd6824c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNeuron.html#ad2cbca7e3c44734701ba87af6bd6824c">Neuron</a> (double a, double b, double I, double r)</td></tr>
-<tr class="memdesc:ad2cbca7e3c44734701ba87af6bd6824c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#ad2cbca7e3c44734701ba87af6bd6824c">More...</a><br/></td></tr>
-<tr class="separator:ad2cbca7e3c44734701ba87af6bd6824c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae47d6f60ba82e110f62876cee0efbf42"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNeuron.html#ae47d6f60ba82e110f62876cee0efbf42">Neuron</a> (double a, double b, double I, double j)</td></tr>
+<tr class="memdesc:ae47d6f60ba82e110f62876cee0efbf42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#ae47d6f60ba82e110f62876cee0efbf42">More...</a><br/></td></tr>
+<tr class="separator:ae47d6f60ba82e110f62876cee0efbf42"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a753989d70b673c960b4a590c8302b5f3"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNeuron.html#a753989d70b673c960b4a590c8302b5f3">I_time</a> (double time, double a, double b)</td></tr>
 <tr class="memdesc:a753989d70b673c960b4a590c8302b5f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">gives the current value during the simulation  <a href="#a753989d70b673c960b4a590c8302b5f3">More...</a><br/></td></tr>
 <tr class="separator:a753989d70b673c960b4a590c8302b5f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0950ac31ae1bbb3ed3d4bcb787c66e78"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNeuron.html#a0950ac31ae1bbb3ed3d4bcb787c66e78">Update</a> (double simtime, double I)</td></tr>
-<tr class="memdesc:a0950ac31ae1bbb3ed3d4bcb787c66e78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update of the neuron state from time t to t+T.  <a href="#a0950ac31ae1bbb3ed3d4bcb787c66e78">More...</a><br/></td></tr>
-<tr class="separator:a0950ac31ae1bbb3ed3d4bcb787c66e78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2ca01def67beb96052f5d24253e6c65"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNeuron.html#aa2ca01def67beb96052f5d24253e6c65">Update</a> (double simtime, double I, double poisson, double w)</td></tr>
+<tr class="memdesc:aa2ca01def67beb96052f5d24253e6c65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update of the neuron state from time t to t+T.  <a href="#aa2ca01def67beb96052f5d24253e6c65">More...</a><br/></td></tr>
+<tr class="separator:aa2ca01def67beb96052f5d24253e6c65"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad501266805bd758f440a91fd4f48f276"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNeuron.html#ad501266805bd758f440a91fd4f48f276">get_spiketime</a> ()</td></tr>
 <tr class="memdesc:ad501266805bd758f440a91fd4f48f276"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allows the access to a private attribute.  <a href="#ad501266805bd758f440a91fd4f48f276">More...</a><br/></td></tr>
 <tr class="separator:ad501266805bd758f440a91fd4f48f276"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -124,10 +124,14 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a23f6157b3d03d699414de8c6e1f3312c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNeuron.html#a23f6157b3d03d699414de8c6e1f3312c">get_steptime</a> (double time)</td></tr>
 <tr class="memdesc:a23f6157b3d03d699414de8c6e1f3312c"><td class="mdescLeft">&#160;</td><td class="mdescRight">function that calculate the time step.  <a href="#a23f6157b3d03d699414de8c6e1f3312c">More...</a><br/></td></tr>
 <tr class="separator:a23f6157b3d03d699414de8c6e1f3312c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea177be15705611f01e31fbef4a2beb3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNeuron.html#aea177be15705611f01e31fbef4a2beb3">connect</a> (size_t target)</td></tr>
+<tr class="memdesc:aea177be15705611f01e31fbef4a2beb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">function that add a target neuron in the table of the source neuron.  <a href="#aea177be15705611f01e31fbef4a2beb3">More...</a><br/></td></tr>
+<tr class="separator:aea177be15705611f01e31fbef4a2beb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:ae90ea57c6d9559c8adeb5c46ee6778e1"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNeuron.html#ae90ea57c6d9559c8adeb5c46ee6778e1">borne_inf</a></td></tr>
+<tr class="memdesc:ae90ea57c6d9559c8adeb5c46ee6778e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">function that simulate poisson distribution.  <a href="#ae90ea57c6d9559c8adeb5c46ee6778e1">More...</a><br/></td></tr>
 <tr class="separator:ae90ea57c6d9559c8adeb5c46ee6778e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af8db865bd7e1f841035fbd99c821dbed"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNeuron.html#af8db865bd7e1f841035fbd99c821dbed">borne_sup</a></td></tr>
 <tr class="separator:af8db865bd7e1f841035fbd99c821dbed"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -138,7 +142,7 @@ Public Attributes</h2></td></tr>
 <div class="textblock"><p>class represanting a neuron </p>
 <p>The class handles the behaviour of one neuron When the potentiel of the neuronne membrane exceeds a certain value, The neuron spikes and enters a refractory period. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="ad2cbca7e3c44734701ba87af6bd6824c"></a>
+<a class="anchor" id="ae47d6f60ba82e110f62876cee0efbf42"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -164,7 +168,7 @@ Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>r</em>&#160;</td>
+          <td class="paramname"><em>j</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -181,7 +185,7 @@ Public Attributes</h2></td></tr>
     <tr><td class="paramname">a</td><td>lower bound of time from which I is different from zero </td></tr>
     <tr><td class="paramname">b</td><td>: superior bound of time from which I is different from zero </td></tr>
     <tr><td class="paramname">I</td><td>: external current </td></tr>
-    <tr><td class="paramname">r</td><td>: the refractory time </td></tr>
+    <tr><td class="paramname">j</td><td>: weight of the neuron conection </td></tr>
   </table>
   </dd>
 </dl>
@@ -189,6 +193,31 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="aea177be15705611f01e31fbef4a2beb3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Neuron::connect </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>target</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>function that add a target neuron in the table of the source neuron. </p>
+<p>At the end , this function generate a table of 1250 boxes that contain the id of the neurons connected to the source neuron.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">target</td><td>the neuron that is connected with the source neuron. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="ae1d8f143ca337f9d37ef05c3978b46c7"></a>
 <div class="memitem">
 <div class="memproto">
@@ -239,7 +268,7 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Allows the access to a private attribute. </p>
-<dl class="section return"><dt>Returns</dt><dd>yes if the neuron spikes and no if it don't </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the neuron spikes and false if it don't </dd></dl>
 
 </div>
 </div>
@@ -276,6 +305,7 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>function that calculate the time step. </p>
+<p>In my program ,I use time in ms for the implementation of the clock. But as we work with steps in the functions "update" and "receive", this function allows to convert time(ms) in steps.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">time</td><td>: simulation time</td></tr>
@@ -317,6 +347,7 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>gives the current value during the simulation </p>
+<p>This function was only used in the begining of the project , when we created one neuron.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">time</td><td>: simulation time </td></tr>
@@ -365,7 +396,7 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a0950ac31ae1bbb3ed3d4bcb787c66e78"></a>
+<a class="anchor" id="aa2ca01def67beb96052f5d24253e6c65"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -379,7 +410,19 @@ Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>I</em>&#160;</td>
+          <td class="paramname"><em>I</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>poisson</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>w</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -395,6 +438,8 @@ Public Attributes</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">simtime</td><td>: simulation time </td></tr>
     <tr><td class="paramname">I</td><td>: external current </td></tr>
+    <tr><td class="paramname">poisson</td><td>: double that shows random spikes from the rest of the brain </td></tr>
+    <tr><td class="paramname">w</td><td>: the weight of the connection </td></tr>
   </table>
   </dd>
 </dl>
@@ -411,7 +456,9 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>lower bound of time from which I is different from zero </p>
+
+<p>function that simulate poisson distribution. </p>
+<dl class="section return"><dt>Returns</dt><dd>an integer randomly following poison distribution.lower bound of time from which I is different from zero </dd></dl>
 
 </div>
 </div>
@@ -448,7 +495,7 @@ Public Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Nov 5 2017 14:15:18 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Nov 11 2017 11:02:30 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

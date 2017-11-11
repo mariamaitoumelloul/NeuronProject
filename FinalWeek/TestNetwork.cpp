@@ -5,6 +5,7 @@ using namespace std;
 
 int main()
 {
+	
 	Network n;
 	double t_start;
 	double t_stop;

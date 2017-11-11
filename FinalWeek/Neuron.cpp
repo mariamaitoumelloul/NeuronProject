@@ -6,21 +6,14 @@ using namespace std;
 
 Neuron::Neuron(double a, double b , double I, double j) : buffer(16,0.0)
 {
-	//v_reset=0.0;
+	
 	borne_inf=a;
 	borne_sup=b;
-	//V_thr=20.0;
-	//tau=20.0;
-	//C=1;
-	//R=20.0;
 	Iext=0;
-	//r_time=r;
 	h=0.1;
-	//D=1.5;
 	C1=(exp(-h/tau));
 	C2=((1-exp(-h/tau))*R);
 	spike_number=0;
-	//J=0.1;
 	membrane_potentiel=0.0;
 	J = j;
 }
@@ -49,6 +42,7 @@ void Neuron::Update (double simtime , double I , double poisson , double w)
 		spike_number++;
 		//cout << " spike " << endl;
 		
+		//If the neuron spikes , he sends to all his targets the weight w.
 		for ( size_t i(0) ; i<target.size() ; ++i)
 		{
 			receive( simtime , w);   
@@ -69,16 +63,6 @@ void Neuron::Update (double simtime , double I , double poisson , double w)
   
 	    				
 }
-
-
-/*int Neuron::poisson()
-{
-	static random_device rd;
-    static mt19937 gen(rd());
-    static poisson_distribution<> d(2);
-    
-    return d(gen);
-}*/
 
 
 double Neuron::get_spiketime()
@@ -108,10 +92,6 @@ bool Neuron::get_spikeState()
 void Neuron::receive (  double time, double J) 
 {
 
-	/*if (buffer.empty())	
-	{ 
-		cerr <<"The buffer is empty" << endl;
-	}*/
     buffer[get_steptime(time+D)%16]=+J;  
        
 }
